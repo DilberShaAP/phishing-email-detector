@@ -19,10 +19,7 @@ while True:
    lines.append(line)
 email_text="\n".join(lines)
 urls=re.findall(r'(https?://\S+)',email_text)
-suspicious_keywords=[
-   "urgent","verify your account","click here",
-   "login now","password reset","bank","security alert"
-]
+suspicious_keywords=["urgent","verify your account","click here","login now","password reset","bank","security alert"]
 found_keywords=[]
 for word in suspicious_keywords:
    if word.lower() in email_text.lower():
